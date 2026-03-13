@@ -21,6 +21,16 @@ app.add_middleware(
 
 controller = APIController()
 
+@app.get("/")
+async def root():
+    return {
+        "message": "AI Restaurant Recommendation API is Live!",
+        "endpoints": {
+            "health": "/health",
+            "recommendations": "/recommend-restaurants (POST)"
+        }
+    }
+
 @app.get("/health")
 async def health_check():
     return {"status": "API running"}
