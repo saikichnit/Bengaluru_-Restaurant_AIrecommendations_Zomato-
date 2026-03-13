@@ -10,6 +10,7 @@ env/
 # Data (Large Files)
 data/*
 !data/metadata/
+!data/processed/restaurant_features.json
 *.csv
 !data/metadata/*.json
 !phase7_ui_frontend/config.js
