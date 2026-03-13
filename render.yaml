@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: dinesmart-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python phase6_api_layer/app.py
+    healthCheckPath: /health
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: PORT
+        value: 8000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHON_VERSION
+        value: 3.9.6
