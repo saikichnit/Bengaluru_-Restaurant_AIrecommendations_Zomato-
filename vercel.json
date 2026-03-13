@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "public": true,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "framework": null,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/phase7_ui_frontend/$1" }
+  ]
+}
